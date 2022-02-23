@@ -1,4 +1,4 @@
-%% Machine Learning Online Class - Exercise 4 Neural Network Learning
+%% Machine Learning Online Class - Neural Network Learning
 
 %
 
@@ -44,7 +44,7 @@ lambda = 0;
 J = nnCostFunction(nn_params, input_layer_size, hidden_layer_size, ...
                    num_labels, X, y, lambda);
 
-fprintf(['Cost at parameters (loaded from ex4weights): %f '...], J);
+fprintf(['Cost at parameters (loaded from weights): %f '...], J);
 
 
 %% =============== Part 4: Implement Regularization ===============
@@ -82,10 +82,6 @@ checkNNGradients;
 
 
 %% =============== Part 8: Implement Regularization ===============
-%  Once your backpropagation implementation is correct, you should now
-%  continue to implement the regularization with the cost and gradient.
-%
-
 fprintf('\nChecking Backpropagation (w/ Regularization) ... \n')
 
 %  Check gradients by running checkNNGradients
