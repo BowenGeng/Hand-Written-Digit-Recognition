@@ -102,7 +102,7 @@ while i < abs(length)                                      % while not finished
         z2 = (sqrt(B*B-A*d2*z3*z3)-B)/A;       % numerical error possible - ok!
       end
       if isnan(z2) || isinf(z2)
-        z2 = z3/2;                  % if we had a numerical problem then bisect
+        z2 = z3/2;                 
       end
       z2 = max(min(z2, INT*z3),(1-INT)*z3);  % don't accept too close to limits
       z1 = z1 + z2;                                           % update the step
@@ -160,7 +160,7 @@ while i < abs(length)                                      % while not finished
   else
     X = X0; f1 = f0; df1 = df0;  % restore point from before failed line search
     if ls_failed || i > abs(length)          % line search failed twice in a row
-      break;                             % or we ran out of time, so we give up
+      break;                             % if ran out of time, give up
     end
     tmp = df1; df1 = df2; df2 = tmp;                         % swap derivatives
     s = -df1;                                                    % try steepest
